@@ -2,7 +2,7 @@
 
 Small Rust microservice that exposes an HTTP API for astronomy data.
 
-## Stack Used
+## Technologies
 
 - [Rust](https://www.rust-lang.org/)
 - [Axum](https://docs.rs/axum/latest/axum/) (web framework)
