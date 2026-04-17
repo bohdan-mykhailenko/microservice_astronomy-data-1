@@ -10,12 +10,14 @@ pub struct AstronomyService {
 impl AstronomyService {
     pub fn new() -> Self {
         AstronomyService {
+            // TODO: add env usage
             client: ServiceClient::new("gTAaJ9UTA7".into(), "04WxCo6NeWoJAA4dQiWy".into()),
         }
     }
 
     pub async fn get_astro_position(&self) -> Result<AstronomyResponse, String> {
-        let request = AstroPositionRequest::new()
+        let request = AstroPositionRequest::new()\
+            // TODO: replace mock data
             .with_object(AstronomyObjectType::Moon)
             .with_placeid("netherlands/amsterdam")
             .with_interval(DateTime::from("2000-01-01T14:14:34"));
